@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elrouby Game</title>
+    <link rel="stylesheet" href="/Elroubyframework/main.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+</head>
+<body>
+    <div class='firstpopup'>
+        <div class='content'>
+            <input id='EnterName' type="text" placeholder="Enter Your Name" />
+            <button onclick="PlayNow(document.getElementById('EnterName'));">Play</button>
+        </div>
+    </div>
+
+    <div class="t-center scoreboard width-300px flex-column margin-rl-auto p-10px mm-25px">
+        <div>
+            <h2 class="m-0px">Score Board</h2>
+            <img class="width-200px height-100px" src="https://images.squarespace-cdn.com/content/v1/618037d25050485b61e7f62d/271f0feb-c872-4eb6-b918-3e9c8e38443c/Rock+Paper+Scissors+Logo.png" alt="" />
+        </div>
+
+        <div class="scorecontent flex-row">
+            <h3 id='playernamepanel'>Welcome: <span id="playername">Unknown</span></h3>
+            <p id='TheScore'>Score: <span id="playerscore">10</span></p>
+        </div>
+
+        <p id='status' class='m-0px'>Status: Welcome</p>
+    </div>
+
+    <div class="gameplay flex-row">
+        <div class="computer">
+            <div class="putplace"></div>
+        </div>
+        <div class="player flex-column">
+            <div class="putplace"></div>
+        </div>
+    </div>
+    <div class='margin-rl-auto t-center'>
+        <button hidden id='playagain' onclick="PlayAgain();">Play Again</button>
+        <div class='hand flex-row margin-rl-auto'>
+            <img class='handlook' src="/images/icon-paper.svg" alt="" />
+            <img class='handlook' src="/images/icon-rock.svg" alt="" />
+            <img class='handlook' src="/images/icon-scissors.svg" alt="" />
+        </div>
+    </div>
+
+    <audio id="classname" src="sounds/startgame.aac"></audio>
+    <script src="js/main.js"></script>
+    <script src="Elroubyframework/js/main.js"></script>
+    <script src="Elroubyframework/js/linking.js"></script>
+    <script src="Elroubyframework/js/dynamics.js"></script>
+</body>
+</html>

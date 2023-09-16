@@ -1,0 +1,149 @@
+@maincolor: #176B87;
+@maincolor2: #053B50;
+@btncolor: #64CCC5;
+@btnhover: #EEEEEE;
+
+*
+{
+    transition: all linear 1s;
+}
+
+.scoreboard
+{
+    background-color: @maincolor;
+    
+    .scorecontent
+    {
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.gameplay
+{
+   justify-content: space-between;
+   align-items: center;
+
+   .PlayerField()
+   {
+        margin: 25px auto;
+        padding: 10px;
+        background-color: @maincolor2;
+        width: 500px;
+        height: 250px;
+        text-align: center !important;
+        border-radius: 10%;
+
+        .putplace
+        {
+            margin: 0 auto;
+            background-color: @maincolor;
+            width: 250px;
+            height: 250px;
+        }
+   }
+
+   .computer
+   {
+        .PlayerField();
+   }
+
+   .player
+   {
+        .PlayerField();
+   }
+}
+
+.hand
+{
+    background-color: @maincolor;
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    gap: 25px;
+
+    img
+    {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: @btncolor;
+        padding: 15px;
+
+        &:hover
+        {
+            background-color: @btnhover;
+        }
+    }
+}
+
+.putplace
+{
+    img, .handimg
+    {
+        width: 75%;
+        height: 75%;
+        margin: 0 auto;
+        padding: 25px;
+    }
+}
+
+.firstpopup
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+
+    .content
+    {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        background-color: white;
+        padding: 25px;
+
+        input
+        {
+            padding: 10px;
+            border-radius: 50px;
+            outline: none;
+            border: 1px solid black;
+        }
+
+        button
+        {
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 15px;
+            border: none;
+            background-color: #053B50;
+            color: white;
+        }
+    }
+}
+
+#playagain
+{
+    background-color: #053B50;
+    padding: 7.5px 15px;
+    margin: 5px;
+    color: white;
+    border: none;
+
+    &:hover
+    {
+        background-color: #64CCC5;
+    }
+}
+
+body
+{
+    background-image: linear-gradient(@maincolor, @maincolor2, @btncolor, @maincolor);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
